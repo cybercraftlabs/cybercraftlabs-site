@@ -30,16 +30,6 @@ export default function DocsPage() {
                   layout and format. It is solely created for demonstration
                   purposes and is not intended for any official use.
                 </p>
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  Please visit:{" "}
-                  <b>
-                    <a href="https://nextjstemplates.com/docs">
-                      nextjstemplates.com/docs
-                    </a>
-                  </b>{" "}
-                  to check out the real docs, setup guide and even video
-                  instructions
-                </p>
               </div>
             </div>
           </div>
