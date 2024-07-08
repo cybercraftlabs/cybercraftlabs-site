@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react"
 
 import ToasterContext from "../context/ToastContext";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
         >
+          <Analytics />
           <Lines />
           <Header />
           <ToasterContext />
