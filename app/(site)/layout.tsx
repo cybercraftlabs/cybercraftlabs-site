@@ -25,11 +25,11 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
         >
-          <Analytics />
           <Lines />
           <Header />
           <ToasterContext />
           {children}
+          <Analytics />
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
