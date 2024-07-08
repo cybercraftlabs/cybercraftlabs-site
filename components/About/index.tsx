@@ -66,15 +66,13 @@ const About = () => {
                 How we can help
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Supercharge your digital
+                We Turn Your Bold Ideas
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  innovation!
+                  into Reality
                 </span>
               </h2>
               <p>
-                At CyberCraft, we customize our services to suit each project, transforming your
-                bold ideas into reality! Our team is dedicated to helping you reach your business
-                objectives through meticulous planning, innovative design, and expert development.
+                At CyberCraft, we tailor our services to meet the unique needs of each project, transforming your bold ideas into reality. Our team is committed to helping you achieve your business objectives through meticulous planning, innovative design, and expert development.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -87,7 +85,7 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     Accelerate Your Innovation
                   </h3>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                  <p>We drive innovation with cutting-edge solutions that enhance efficiency and performance, ensuring your business stays ahead of the competition.</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -100,7 +98,7 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     Tailored FlexiEngage Solutions
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p>Our customized FlexiEngage solutions are designed to fit your specific needs, providing flexibility and scalability for your growing business.</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -113,7 +111,7 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     Reimagine IT, Simplified
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p>We simplify IT with streamlined processes and advanced technologies, making it easier for you to manage and optimize your operations.</p>
                 </div>
               </div>
             </motion.div>

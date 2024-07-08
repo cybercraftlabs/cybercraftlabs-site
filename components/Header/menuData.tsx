@@ -23,13 +23,13 @@ const menuData: Menu[] = [
     id: 2.3,
     title: "Services",
     newTab: false,
-    path: "/docs",
+    path: "/services/cybersecurity",
   },
   {
     id: 4,
     title: "Contact Us",
     newTab: false,
-    path: "/support",
+    path: "/contact",
   },
 ];
 

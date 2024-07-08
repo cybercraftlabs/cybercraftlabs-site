@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -28,7 +29,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                <Link href="index.html" className="relative">
                   <Image
                     width={130}
                     height={80}
@@ -43,7 +44,7 @@ const Footer = () => {
                     alt="Logo"
                     className="hidden dark:block"
                   />
-                </a>
+                </Link>
 
                 <p className="mb-10 mt-5">
                   Security Innovated, Solutions Crafted 🛡️
@@ -52,12 +53,12 @@ const Footer = () => {
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
                 </p>
-                <a
+                <Link
                   href="mailto:contact@cybercraftlabs.site"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
                   contact@cybercraftlabs.site
-                </a>
+                </Link>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
@@ -85,36 +86,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#features"
+                      <Link
+                        href="/#features"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         About Us
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/docs"
+                      <Link
+                        href="/services/cybersecurity"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Our Services
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/contact"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -143,36 +144,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
+                      <Link
                         href="#features"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         About Company
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/blog"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Our Blog
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Privacy Policy
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         License & Uses
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -265,19 +266,19 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-8">
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     English
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>
@@ -325,7 +326,7 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="https://www.facebook.com/cybercraftlabs" aria-label="social icon">
+                  <Link href="https://www.facebook.com/cybercraftlabs" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -346,10 +347,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://twitter.com/cybercraftlabs" aria-label="social icon">
+                  <Link href="https://twitter.com/cybercraftlabs" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -370,10 +371,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://linkedin.com/company/cybercraftlabs" aria-label="social icon">
+                  <Link href="https://linkedin.com/company/cybercraftlabs" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -394,10 +395,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://instagram.com/cybercraftlabs" aria-label="social icon">
+                  <Link href="https://instagram.com/cybercraftlabs" aria-label="social icon">
                     <svg
                       width="24px"
                       height="24px"
@@ -409,10 +410,10 @@ const Footer = () => {
                       <circle cx="12" cy="12" r="4" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       <path d="M18 6L18 6.01" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://wa.me/+919065205961" aria-label="social icon">
+                  <Link href="https://wa.me/+919065205961" aria-label="social icon">
                     <svg
                       width="24px"
                       height="24px"
@@ -422,10 +423,10 @@ const Footer = () => {
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary">
                       <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://github.com/cybercraftlabs/" aria-label="social icon">
+                  <Link href="https://github.com/cybercraftlabs/" aria-label="social icon">
                     <svg
                       fill="#ffffff"
                       width="24px"
@@ -434,7 +435,7 @@ const Footer = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary">
                       <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z" /></svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>
