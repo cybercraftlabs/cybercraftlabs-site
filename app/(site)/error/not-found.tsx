@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import "./globals.css";
+import "../../globals.css";
 
 export const metadata: Metadata = {
   title: "Error Page - Solid SaaS Boilerplate",
