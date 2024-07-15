@@ -44,7 +44,7 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          theme: "tokyo-night",
+          theme: "night-owl",
           keepBackground: false,
         },
       ],
