@@ -1,4 +1,8 @@
 import { defineConfig, defineCollection, s } from "velite";
+import rehypeSlug from "rehype-slug";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { classicNameResolver } from "typescript";
 
 //blog/hello-world
 
@@ -35,7 +39,26 @@ export default defineConfig({
   },
   collections: { posts },
   mdx: {
-    rehypePlugins: [],
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypePrettyCode,
+        {
+          theme: "tokyo-night",
+          keepBackground: false,
+        },
+      ],
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: ["subheading-anchor"],
+            ariaLabel: "Link to Section",
+          },
+        },
+      ],
+    ],
     remarkPlugins: [],
   },
 });
