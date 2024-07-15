@@ -1,6 +1,7 @@
 import BlogItem from "@/components/Blog/BlogItem";
 import { posts } from "#site/content";
 import { Metadata } from "next";
+import { sortPosts } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Cybercraft Labs - Blog",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const BlogPage = async () => {
-  const blogData = posts;
+  const blogData = sortPosts(posts.filter((post) => post.published));
   return (
     <>
       {/* <!-- ===== Blog Grid Start ===== --> */}

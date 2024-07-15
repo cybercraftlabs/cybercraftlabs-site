@@ -54,10 +54,10 @@ const Footer = () => {
                   contact
                 </p>
                 <Link
-                  href="mailto:contact@cybercraftlabs.site"
+                  href="mailto:contact@cybercraftlabs.org"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  contact@cybercraftlabs.site
+                  contact@cybercraftlabs.org
                 </Link>
               </motion.div>
 
@@ -406,9 +406,9 @@ const Footer = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary">
-                      <rect x="2" y="2" width="20" height="20" rx="5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <circle cx="12" cy="12" r="4" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M18 6L18 6.01" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <rect x="2" y="2" width="20" height="20" rx="5" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="12" cy="12" r="4" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M18 6L18 6.01" stroke="#333333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
                 </li>

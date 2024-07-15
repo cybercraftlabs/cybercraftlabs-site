@@ -2,10 +2,11 @@ import React from "react";
 import SectionHeader from "../Common/SectionHeader";
 import BlogItem from "@/components/Blog/BlogItem";
 import { posts } from "#site/content";
+import { sortPosts } from "@/lib/utils";
 
 
 const Blog = async () => {
-  const blogData = posts;
+  const blogData = sortPosts(posts.filter((post) => post.published));
   return (
     <section className="py-20 lg:py-25 xl:py-30">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
