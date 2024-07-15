@@ -1,12 +1,16 @@
 "use client";
-import { Blog } from "@/types/blog";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogItem = ({ blog }: { blog: Blog }) => {
-  const { mainImage, title, metadata } = blog;
+interface BlogItemProps {
+  slug: string;
+  title: string;
+  mainImage: string;
+  description: string;
+}
 
+const BlogItem = ({ slug, title, mainImage, description }: BlogItemProps) => {
   return (
     <>
       <motion.div
@@ -15,7 +19,6 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
             opacity: 0,
             y: -20,
           },
-
           visible: {
             opacity: 1,
             y: 0,
@@ -27,17 +30,17 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         viewport={{ once: true }}
         className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
       >
-        <Link href={`/blog/`} className="relative block aspect-[368/239]">
+        <Link href={`/${slug}`} className="relative block aspect-[368/239]">
           <Image src={mainImage} alt={title} fill />
         </Link>
 
         <div className="px-4">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-lg font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
-            <Link href={`/blog/blog-details`}>
-              {`${title.slice(0, 40)}...`}
+            <Link href={`/${slug}`}>
+              {title.slice(0, 40)}
             </Link>
           </h3>
-          <p className="line-clamp-3">{metadata}</p>
+          <p className="line-clamp-3">{description}</p>
         </div>
       </motion.div>
     </>
