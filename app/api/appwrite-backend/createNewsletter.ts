@@ -21,7 +21,6 @@ export const createDocument = async (
       message: "You've successfully subscribed to our newsletter!",
     };
   } catch (error) {
-    console.log(error);
     return {
       success: false,
       message: "There was an error while adding you to our list.",
