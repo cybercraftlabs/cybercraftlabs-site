@@ -2,8 +2,25 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { createDocument } from "@/app/api/appwrite-backend/createNewsletter";
+import { useState } from "react";
+
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { success, message } = await createDocument({ email });
+
+    setMessage(message);
+    if (success) {
+      setEmail('');
+    }
+  };
+
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
@@ -203,15 +220,19 @@ const Footer = () => {
                     Subscribe to receive future updates
                   </p>
 
-                  <form action="#">
+                  <form onSubmit={handleSubmit}>
                     <div className="relative">
                       <input
-                        type="text"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email address"
                         className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
+                        required
                       />
 
                       <button
+                        type="submit"
                         aria-label="signup to newsletter"
                         className="absolute right-0 p-4"
                       >
@@ -238,6 +259,7 @@ const Footer = () => {
                       </button>
                     </div>
                   </form>
+                  {message && <p className="mt-5 text-black dark:text-white">{message}</p>}
                 </motion.div>
               </div>
             </div>
