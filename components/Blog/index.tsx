@@ -6,7 +6,7 @@ import { sortPosts } from "@/lib/utils";
 
 
 const Blog = async () => {
-  const blogData = sortPosts(posts.filter((post) => post.published));
+  const blogData = sortPosts(posts.filter((post) => post.published)).slice(0, 3);
   return (
     <section className="py-20 lg:py-25 xl:py-30">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
@@ -16,7 +16,7 @@ const Blog = async () => {
             headerInfo={{
               title: `NEWS & BLOGS`,
               subtitle: `Latest News & Blogs`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+              description: `Stay updated with the latest insights and trends in software development, DevOps, and cybersecurity. Our blog features expert articles, industry news, and practical tips to help you stay ahead in the tech world. Discover how our innovative solutions can drive your business forward.`,
             }}
           />
         </div>
