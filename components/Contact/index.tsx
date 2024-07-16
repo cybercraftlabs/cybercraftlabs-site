@@ -2,19 +2,52 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
+import { createContactDocument } from "@/app/api/appwrite-backend/createContact";
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
+  // Fix rehydration error
+  const [hasMounted, setHasMounted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    subject: '',
+    phonenumber: '',
+    message: ''
+  });
+  const [responseMessage, setResponseMessage] = useState('');
+
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
+
   if (!hasMounted) {
     return null;
   }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { success, message } = await createContactDocument(formData);
+
+    setResponseMessage(message);
+    if (success) {
+      setFormData({
+        fullname: '',
+        email: '',
+        subject: '',
+        phonenumber: '',
+        message: ''
+      });
+    }
+  };
 
   return (
     <>
@@ -60,43 +93,58 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="fullname"
+                    value={formData.fullname}
+                    onChange={handleChange}
                     placeholder="Full name"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
-
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email address"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
-
                   <input
                     type="text"
+                    name="phonenumber"
+                    value={formData.phonenumber}
+                    onChange={handleChange}
                     placeholder="Phone number"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-11.5 flex">
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Message"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    required
                   ></textarea>
                 </div>
 
@@ -106,6 +154,7 @@ const Contact = () => {
                       id="default-checkbox"
                       type="checkbox"
                       className="peer sr-only"
+                      required
                     />
                     <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
                       <svg
@@ -129,11 +178,12 @@ const Contact = () => {
                       className="flex max-w-[425px] cursor-pointer select-none pl-5"
                     >
                       By clicking Checkbox, you agree to use our “Form” terms
-                      And consent cookie usage in browser.
+                      and consent to cookie usage in the browser.
                     </label>
                   </div>
 
                   <button
+                    type="submit"
                     aria-label="send message"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
@@ -154,6 +204,7 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
+              {responseMessage && <p className="mt-5 text-black dark:text-white">{responseMessage}</p>}
             </motion.div>
 
             <motion.div
