@@ -298,7 +298,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="mailto:support@cybercraftlabs.org" className="hover:text-primary">
                     Support
                   </Link>
                 </li>
