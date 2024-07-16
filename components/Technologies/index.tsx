@@ -61,8 +61,8 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-07.svg"
-                  alt="Brand"
+                  src="./images/brand/nextjs.svg"
+                  alt="NextJS"
                 />
               </div>
             </motion.div>
@@ -108,8 +108,8 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-08.svg"
-                  alt="Brand"
+                  src="./images/brand/sentry.svg"
+                  alt="Sentry"
                 />
               </div>
             </motion.div>
@@ -157,8 +157,8 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-09.svg"
-                  alt="Brand"
+                  src="./images/brand/arch.svg"
+                  alt="Arch Linux"
                 />
               </div>
             </motion.div>
@@ -225,8 +225,8 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-10.svg"
-                  alt="Brand"
+                  src="./images/brand/burpsuite.svg"
+                  alt="Burpsuite"
                 />
               </div>
             </motion.div>
@@ -274,8 +274,8 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-11.svg"
-                  alt="Brand"
+                  src="./images/brand/linux.svg"
+                  alt="Linux"
                 />
               </div>
             </motion.div>
@@ -323,7 +323,7 @@ const Technologies = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-12.svg"
+                  src="./images/brand/openbugbounty.svg"
                   alt="Brand"
                 />
               </div>
