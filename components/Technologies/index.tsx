@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 
-const Integration = () => {
+const Technologies = () => {
   return (
     <>
       <section>
@@ -11,9 +11,9 @@ const Integration = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: `INTEGRATIONS`,
-              subtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+              title: `Technologies`,
+              subtitle: `Cutting-Edge Solutions for Your Business, Professional or Personal Needs`,
+              description: `We leverage the latest technologies to deliver top-notch Secure Software Development, DevOps, and CyberSecurity Services. Our expertise ensures innovative and reliable solutions for your business.`,
             }}
           />
 
@@ -335,4 +335,4 @@ const Integration = () => {
   );
 };
 
-export default Integration;
+export default Technologies;
