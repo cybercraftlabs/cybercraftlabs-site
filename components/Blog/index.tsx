@@ -1,8 +1,9 @@
 import React from "react";
 import SectionHeader from "../Common/SectionHeader";
-import BlogItem from "@/components/Blog/BlogItem";
+// import BlogItem from "@/components/Blog/BlogItem";
 import { posts } from "#site/content";
 import { sortPosts } from "@/lib/utils";
+import NewBlogItem from "./NewBlogItem";
 
 
 const Blog = async () => {
@@ -28,7 +29,7 @@ const Blog = async () => {
           {blogData.map((post) => {
             const { slug, title, mainImage, description } = post;
             return (
-              <BlogItem
+              <NewBlogItem
                 key={slug}
                 slug={slug}
                 title={title}
@@ -37,6 +38,18 @@ const Blog = async () => {
               />
             );
           })}
+          {/* {blogData.map((post) => {
+            const { slug, title, mainImage, description } = post;
+            return (
+              <BlogItem
+                key={slug}
+                slug={slug}
+                title={title}
+                mainImage={mainImage}
+                description={description}
+              />
+            );
+          })} */}
         </div>
       </div>
     </section>
