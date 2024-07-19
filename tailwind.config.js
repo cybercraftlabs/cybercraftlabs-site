@@ -41,6 +41,8 @@ module.exports = {
         alabaster: "#FBFBFB",
         zumthor: "#EDF5FF",
         socialicon: "#D1D8E0",
+        sclr1: "#212539",
+        sclr3: "#1f2338",
       },
       fontSize: {
         metatitle: ["12px", "20px"],

@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import featuresData from "./featuresData";
-import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
+import { NewServices } from "../ui/NewServices";
+import { motion } from "framer-motion";
 
 const Feature = () => {
   return (
@@ -21,16 +21,26 @@ const Feature = () => {
                  software solutions through reverse engineering.`,
             }}
           />
-          {/* <!-- Section Title End --> */}
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -10,
+              },
 
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-            {/* <!-- Features item Start --> */}
-
-            {featuresData.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
-            ))}
-            {/* <!-- Features item End --> */}
-          </div>
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="animate_top z-40 transition-all"
+          >
+            <NewServices />
+          </motion.div>
         </div>
       </section>
 
