@@ -12,10 +12,11 @@ interface NewBlogItemProps {
     title: string;
     mainImage: string;
     description: string;
+    category: string;
 }
 
 
-const NewBlogItem = ({ slug, title, mainImage, description }: NewBlogItemProps) => {
+const NewBlogItem = ({ slug, title, mainImage, description, category }: NewBlogItemProps) => {
     return (
         <>
             <motion.div
@@ -48,7 +49,7 @@ const NewBlogItem = ({ slug, title, mainImage, description }: NewBlogItemProps) 
                             translateZ="60"
                             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                         >
-                            {`${description.slice(0, 155)}...`}
+                            {`${description.slice(0, 140)}...`}
                         </CardItem>
                         <CardItem translateZ="100" className="w-full mt-4">
                             <Image
@@ -74,7 +75,7 @@ const NewBlogItem = ({ slug, title, mainImage, description }: NewBlogItemProps) 
                                 as="button"
                                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                             >
-                                Cyber Security
+                                {category}
                             </CardItem>
                         </div>
                     </CardBody>
