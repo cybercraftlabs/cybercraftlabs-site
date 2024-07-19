@@ -14,19 +14,45 @@ const menuData: Menu[] = [
     path: "/#features",
   },
   {
-    id: 2.1,
+    id: 3,
     title: "Blog",
     newTab: false,
     path: "/blog",
   },
   {
-    id: 2.3,
+    id: 4,
     title: "Services",
     newTab: false,
     path: "/services/cybersecurity",
+    submenu: [
+      {
+        id: 41,
+        title: "Cyber Security",
+        newTab: false,
+        path: "/services/cybersecurity",
+      },
+      {
+        id: 42,
+        title: "Software Development",
+        newTab: false,
+        path: "/services/software-development",
+      },
+      {
+        id: 43,
+        title: "DevOps",
+        newTab: false,
+        path: "/services/devops",
+      },
+      {
+        id: 44,
+        title: "Digital Marketing",
+        newTab: false,
+        path: "/services/digital-marketing",
+      },
+    ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Contact Us",
     newTab: false,
     path: "/contact",
