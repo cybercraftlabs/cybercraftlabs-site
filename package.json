@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sentry/nextjs": "^8",
+    "@tabler/icons-react": "^3.11.0",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",

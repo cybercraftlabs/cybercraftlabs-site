@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CyberSecurityServices } from "@/components/Services/ServicesSection";
+import { ServicesFeatures } from "@/components/Services/shared/ServicesFeatures";
 
 
 export default function CybersecurityPage() {
@@ -54,9 +55,29 @@ export default function CybersecurityPage() {
                         Investing in these cybersecurity services is crucial for safeguarding your organization’s assets, reputation, and overall success.
                     </p>
 
-                    <div className="block mt-10">
+                    <div className="block my-10">
                         <CyberSecurityServices />
                     </div>
+                    <motion.div
+                        variants={{
+                            hidden: {
+                                opacity: 0,
+                                y: -10,
+                            },
+
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                            },
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="animate_top z-40 rounded-lg border border-white bg-white px-7.5 py-6 shadow-solid-3 transition-all dark:border-strokedark dark:bg-blacksection xl:p-12.5"
+                    >
+                        <ServicesFeatures />
+                    </motion.div>
                 </div>
             </section>
         </motion.div>
