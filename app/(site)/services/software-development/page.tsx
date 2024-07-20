@@ -13,29 +13,29 @@ export default function SoftwareDevelopmentPage() {
                 "https://raw.githubusercontent.com/thehackersbrain/carepulse/main/screenshots/healthcare.png",
         },
         {
-            title: "Cursor",
-            link: "https://cursor.so",
+            title: "Snapgram",
+            link: "https://snapgram-two-self.vercel.app/",
             thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+                "https://raw.githubusercontent.com/thehackersbrain/snapgram/main/screenshots/snapgram.png",
         },
         {
-            title: "Rogue",
-            link: "https://userogue.com",
+            title: "Minimal Portfolio",
+            link: "https://minimal-portfolio-blue.vercel.app/",
             thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+                "https://raw.githubusercontent.com/thehackersbrain/minimal-portfolio/main/screenshots/minimal-portfolio.png",
         },
 
         {
-            title: "Editorially",
-            link: "https://editorially.org",
+            title: "Brainwave",
+            link: "https://brainwave-pearl-five.vercel.app/",
             thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+                "https://raw.githubusercontent.com/thehackersbrain/brainwave/main/screenshots/brainwave.png",
         },
         {
-            title: "Editrix AI",
-            link: "https://editrix.ai",
+            title: "Hoobank",
+            link: "https://hoobank-two-wine.vercel.app/",
             thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+                "https://raw.githubusercontent.com/thehackersbrain/hoobank/main/screenshots/hoobank.png",
         },
         {
             title: "Pixel Perfect",
