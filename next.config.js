@@ -34,6 +34,19 @@ const nextConfig = {
         port: "",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "**",
+      },
+      // temp: should be removed later
+      {
+        protocol: "https",
+        hostname: "aceternity.com",
+        port: "",
+        pathname: "**",
+      },
     ],
   },
   webpack: (config) => {
