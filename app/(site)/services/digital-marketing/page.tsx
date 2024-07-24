@@ -2,9 +2,9 @@ import React from 'react'
 
 const digitalMarketingPage = () => {
     return (
-        <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-            <div className="container mx-auto">
-                <h3 id="digital-marketing-services">Digital Marketing Services</h3>
+        <>
+            <h1 className="text-center text-hero font-bold text-white mb-10">Digital Marketing</h1>
+            <div className="block my-10">
                 <p>We offer a comprehensive range of digital marketing services designed to help you reach your target audience, increase brand visibility, and drive growth. Our services include search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, content marketing, email marketing, and analytics. By leveraging the latest tools and techniques, we create customized strategies that deliver measurable results, ensuring your business stays ahead of the competition.</p>
                 <h3 id="importance-of-digital-marketing-services">Importance of Digital Marketing Services</h3>
                 <ol>
@@ -18,7 +18,7 @@ const digitalMarketingPage = () => {
                 </ol>
                 <p>Investing in digital marketing services is essential for modern businesses to thrive in the digital age. Our digital marketing solutions are tailored to meet your specific needs, ensuring effective communication with your target audience, increased online presence, and sustained business growth.</p>
             </div>
-        </section>
+        </>
     )
 }
 

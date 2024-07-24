@@ -1,8 +1,8 @@
 const devopsPage = () => {
     return (
-        <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-            <div className="container mx-auto">
-                <h3 id="devops-services">DevOps Services</h3>
+        <>
+            <h1 className="text-center text-hero font-bold text-white mb-10">Digital Marketing</h1>
+            <div className="block my-10">
                 <p>We provide comprehensive DevOps services to help you streamline your software development process, ensuring faster delivery, higher quality, and improved collaboration. Our DevOps solutions include continuous integration and continuous delivery (CI/CD), infrastructure as code (IaC), and automated testing. By leveraging tools like Apache Jenkins and others, we automate and optimize your development pipeline, enhancing efficiency and reducing time to market.</p>
                 <h3 id="importance-of-devops-services">Importance of DevOps Services</h3>
                 <ol>
@@ -15,7 +15,7 @@ const devopsPage = () => {
                 </ol>
                 <p>Investing in DevOps services is crucial for modern software development, providing you with the tools and practices needed to stay competitive in a fast-paced industry. Our DevOps solutions are designed to enhance your development process, improve collaboration, and ensure the quality and scalability of your software applications.</p>
             </div>
-        </section>
+        </>
     )
 }
 

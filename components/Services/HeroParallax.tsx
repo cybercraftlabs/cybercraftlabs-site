@@ -105,20 +105,10 @@ export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-                Software Development <br /> Services
+                Turn the vision into <br /> Reality
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 pb-2 dark:text-neutral-200">
-                Software development services are essential for transforming your ideas into reality. They help:
-            </p>
-            <ol className="dark:text-neutral-400">
-                <li><b>Enhance Business Efficiency:</b> Custom software solutions streamline processes and improve productivity.</li>
-                <li><b>Improve User Engagement:</b> High-quality web, mobile, and desktop applications offer exceptional user experiences.</li>
-                <li><b>Ensure Scalability:</b> Scalable solutions grow with your business, accommodating increasing demands and user base.</li>
-                <li><b>Strengthen Security:</b> Secure software development practices protect your data and maintain user trust.</li>
-                <li><b>Gain Competitive Advantage:</b> Innovative and efficient software solutions give you a competitive edge in the market.</li>
-            </ol>
-            <p className="dark:text-neutral-300">
-                Investing in professional software development services is crucial for driving business growth, enhancing user satisfaction, and maintaining a strong market presence.
+            <p className="max-w-2xl text-base mt-8 pb-2 dark:text-neutral-300">
+                At Cybercraft Labs, we specialize in transforming your innovative ideas into fully functional, high-performing digital solutions. Our expert team of developers, designers, and cybersecurity specialists are dedicated to bringing your vision to life with precision and creativity. Whether you need a mobile app, a dynamic website, or a robust desktop application, we tailor our services to meet your unique needs. We combine cutting-edge technology with best practices in DevOps and cybersecurity to ensure your project is not only visually appealing but also secure and scalable. Partner with us to turn your dreams into reality and achieve your business goals with confidence.
             </p>
         </div>
     );
