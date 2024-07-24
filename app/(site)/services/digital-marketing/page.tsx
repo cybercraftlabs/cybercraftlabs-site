@@ -1,4 +1,9 @@
-import React from 'react'
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Digital Marketing - Services - Cybercraft Labs Pvt Ltd",
+    description: "Boost your online presence with Cybercraft Labs' digital marketing services. From SEO to social media management, our experts create data-driven strategies to increase your visibility, engagement, and conversions. Grow your brand with us."
+}
 
 const digitalMarketingPage = () => {
     return (

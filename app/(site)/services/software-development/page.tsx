@@ -1,5 +1,10 @@
-"use client"
 import { SoftwareDevServices } from "@/components/Services/softwareDev/SoftwareDevServices";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Software Development - Services - Cybercraft Labs Pvt Ltd",
+    description: "Turn your ideas into powerful software solutions with Cybercraft Labs. We offer custom mobile, web, and desktop app development services tailored to your business needs. Partner with us for innovative and scalable software."
+}
 
 export default function SoftwareDevelopmentPage() {
     return (

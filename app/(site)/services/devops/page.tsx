@@ -1,3 +1,10 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "DevOps - Services - Cybercraft Labs Pvt Ltd",
+    description: "Streamline your operations with Cybercraft Labs' DevOps services. Our team enhances your development processes with automation, continuous integration, and efficient workflows, ensuring faster and more reliable software delivery."
+}
+
 const devopsPage = () => {
     return (
         <>

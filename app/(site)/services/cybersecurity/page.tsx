@@ -1,5 +1,11 @@
-"use client"
 import { CyberSecurityServices } from "@/components/Services/ServicesSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "CyberSecurity - Services - Cybercraft Labs Pvt Ltd",
+    description: "Protect your business with Cybercraft Labs' comprehensive cybersecurity services. Our experts deliver cutting-edge solutions to safeguard your data, mitigate risks, and ensure compliance. Secure your digital assets with us.",
+    // other metadata
+};
 
 export default function CybersecurityPage() {
     return (
