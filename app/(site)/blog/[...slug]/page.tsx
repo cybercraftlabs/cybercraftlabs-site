@@ -1,18 +1,10 @@
 import { posts } from '#site/content'
-import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from 'next/navigation';
 import { formatDate } from '@/lib/utils';
 import { MDXContent } from '@/components/Blog/mdxComponents';
-
-export const metadata: Metadata = {
-  title: "Blog Post - Cybercraft Labs",
-  description: "This is Blog details page for Cybercraft Labs",
-  // other metadata
-};
-
 
 interface PostPageProps {
   params: {
@@ -29,6 +21,23 @@ async function getPostFormParams(params: PostPageProps["params"]) {
 
 export async function generateStaticParams(): Promise<PostPageProps["params"][]> {
   return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
+}
+
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const post = await getPostFormParams(params);
+
+  if (!post) {
+    return {
+      title: "Post not found - Cybercraft Labs",
+      description: "This post could not be found.",
+    };
+  }
+
+  return {
+    title: `${post.title} - Cybercraft Labs`,
+    description: post.description,
+    // other metadata
+  };
 }
 
 const PostPage = async ({ params }: PostPageProps) => {
@@ -48,7 +57,7 @@ const PostPage = async ({ params }: PostPageProps) => {
                 <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                   <Image
                     src={post.mainImage}
-                    alt="Kobe Steel plant that supplied"
+                    alt={post.title}
                     fill
                     className="rounded-md object-cover object-center"
                   />
