@@ -9,7 +9,7 @@ import NewBlogItem from "./NewBlogItem";
 const Blog = async () => {
   const blogData = sortPosts(posts.filter((post) => post.published)).slice(0, 3);
   return (
-    <section className="py-20 lg:py-25 xl:py-30">
+    <section className="md:py-20 sm:py-15 lg:py-25 xl:py-30">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
         {/* <!-- Section Title Start --> */}
         <div className="animate_top mx-auto text-center">
