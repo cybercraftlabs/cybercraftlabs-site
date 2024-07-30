@@ -435,7 +435,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://wa.me/+919065205961" aria-label="social icon">
+                  <Link href="https://wa.me/+919229575576" aria-label="social icon">
                     <svg
                       width="24px"
                       height="24px"
